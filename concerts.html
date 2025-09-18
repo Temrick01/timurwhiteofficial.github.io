@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Timur White | Концерты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --bg-primary: #121212;
+            --text-primary: #e0e0e0;
+            --accent: #bb86fc;
+            --card-bg: #1e1e1e;
+            --btn-color: #bb86fc;
+        }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+        }
+        nav {
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 500;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: var(--btn-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--accent);
+        }
+        .concerts-list {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .concerts-list p {
+            background: var(--card-bg);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--btn-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.5);
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="gallery.html">Фото</a></li>
+            <li><a href="concerts.html" class="active">Концерты</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Ближайшие выступления</h2>
+        <div class="concerts-list">
+            <p>🎙️ Участие в <strong>«Голос»</strong> — апрель 2025 (эфир на Первом канале)</p>
+            <p>📍 <strong>Москва</strong> — 15 мая 2025, клуб «Изоляция»</p>
+            <p>📍 <strong>Санкт-Петербург</strong> — 22 мая 2025, Loft Concert Club</p>
+            <p>📍 <strong>Казань</strong> — 5 июня 2025, Центр культуры им. Галиаскара Камала</p>
+        </div>
+        <p style="text-align:center; margin-top:30px;">
+            <a href="contact.html" class="btn">Написать менеджеру</a>
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Timur White. Все права защищены.</p>
+        <p>Движение начинается с первого шага.</p>
+    </footer>
+
+</body>
+</html>
