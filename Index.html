@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Timur White | Официальный сайт</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --bg-primary: #121212;
+            --text-primary: #e0e0e0;
+            --accent: #bb86fc;
+            --card-bg: #1e1e1e;
+            --header-gradient: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+            --btn-color: #bb86fc;
+        }
+
+        .light-theme {
+            --bg-primary: #f5f5f5;
+            --text-primary: #121212;
+            --accent: #6200ea;
+            --card-bg: #fff;
+            --header-gradient: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9));
+            --btn-color: #6200ea;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        header {
+            background: var(--header-gradient), url('https://i.imgur.com/8V0X3lL.jpeg') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        }
+
+        header p.tagline {
+            font-size: 1.8rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 500;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: var(--btn-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .bio-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .concerts-list {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .concerts-list p {
+            background: var(--card-bg);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.08);
+            border-color: var(--accent);
+        }
+
+        .upload-area {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .upload-btn {
+            background: var(--btn-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .upload-btn:hover {
+            opacity: 0.9;
+        }
+
+        .social-links {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.8rem;
+        }
+
+        .social-links a {
+            color: var(--accent);
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #e8491d;
+            transform: scale(1.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.5);
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p.tagline { font-size: 1.3rem; }
+            .container { width: 95%; }
+            h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <h1>Timur White</h1>
+        <p class="tagline">Путь от нуля к сцене. С 2020 года — в музыке.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#gallery">Фото</a></li>
+            <li><a href="#concerts">Концерты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>Обо мне</h2>
+            <div class="bio-text">
+                <p>Я — <strong>Timur White</strong>, музыкант, который начал свой путь с нуля в 2020 году. Без фамилий, связей и продюсеров — только голос, мечта и работа.</p>
+                <p>С тех пор прошёл путь от домашних записей до больших сцен. Участвую в проекте <strong>«Голос»</strong> — это важная веха. После шоу — серия живых концертов по городам России.</p>
+                <p>Моя музыка — это честность, энергия и эмоции. Я верю, что каждый может начать сначала. Главное — не останавливаться.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background: var(--card-bg);">
+        <div class="container">
+            <h2>Проекты</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.2rem;">
+                <p>🎤 <strong>«Голос – 2025»</strong> — участие в главном музыкальном шоу страны. Первое выступление уже скоро!</p>
+                <p>🎸 <strong>Тур «Начни сначала»</strong> — концерты после шоу. Москва, Санкт-Петербург, Казань, Екатеринбург и другие города.</p>
+                <p>🎧 Новые треки в записи. Первый сингл выйдет осенью 2025.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Фотогалерея</h2>
+            <div class="gallery" id="photo-gallery">
+                <!-- Замени ссылки на свои фото -->
+                <img src="Timur_White photo.jpg" alt="На сцене">
+                <img src="Timur_White photo2.jpg" alt="Face">
+                <img src="https://i.imgur.com/5KjFz9A.jpeg" alt="Timur за кадром">
+                <img src="https://i.imgur.com/LnUqQ9x.jpeg" alt="Timur с фанатами">
+            </div>
+        </div>
+    </section>
+
+    <section id="concerts">
+        <div class="container">
+            <h2>Ближайшие выступления</h2>
+            <div class="concerts-list">
+                <p>🎙️ Участие в <strong>«Голос»</strong> — апрель 2025 (эфир на Первом канале)</p>
+                <p>📍 <strong>Москва</strong> — 15 мая 2025, клуб «Изоляция»</p>
+                <p>📍 <strong>Санкт-Петербург</strong> — 22 мая 2025, Loft Concert Club</p>
+                <p>📍 <strong>Казань</strong> — 5 июня 2025, Центр культуры им. Галиаскара Камала</p>
+                <a href="#contact" class="btn" style="color:white; background:var(--btn-color); padding:10px 20px; border-radius:5px; text-decoration:none; display:inline-block; margin-top:20px;">Написать менеджеру</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p style="text-align:center; font-size:1.2rem;">
+                📧 <strong>Email:</strong> booking@timurwhite.ru<br>
+                📞 <strong>Менеджер:</strong> +7 (999) 100-20-30<br>
+                💬 <strong>Telegram:</strong> @timur_manager<br>
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Timur White. Все права защищены.</p>
+        <p>Движение начинается с первого шага.</p>
+    </footer>
+
+    <!-- Кнопка смены темы -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script>
+        // Смена темы
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+            const icon = document.querySelector('.theme-toggle i');
+            if (icon.classList.contains('fa-moon')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+    </script>
+
+</body>
+</html>
